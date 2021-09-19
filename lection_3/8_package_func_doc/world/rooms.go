@@ -14,7 +14,7 @@ func GetStartingLevel() int {
 	return startingLevel
 }
 
-func checkStartingLevel(level int) bool {
+func CheckStartingLevel(level int) bool {
 	return level == startingLevel
 }
 

@@ -4,7 +4,6 @@ import "fmt"
 
 type Flyer interface {
 	Fly()
-	Greet()
 }
 
 type Bird struct {
@@ -20,7 +19,7 @@ func (b Bird) Greet() {
 }
 
 func DoFly(f Flyer) {
-	f.Greet()
+
 	f.Fly()
 }
 
@@ -31,6 +30,16 @@ func (m Mig45) Fly() {
 }
 
 func main() {
+	flSlice := []Flyer{
+		Bird{"Duck plane"},
+		Mig45{},
+	}
+	fmt.Println(flSlice)
+
+	for _, v := range flSlice {
+		v.Fly()
+	}
+	return
 	duckPlane := Bird{"Duck plane"}
 
 	GoFly(duckPlane)

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Person struct {
+type person struct {
 	Name string
 	inn  string
 }
@@ -12,12 +12,12 @@ type Stuff struct {
 }
 
 type SecretAgent struct {
-	Person
+	person
 	Stuff
 	LicenseToKill bool
 }
 
-func (p Person) GetName() string {
+func (p person) GetName() string {
 	return p.Name
 }
 
@@ -26,9 +26,15 @@ func (s SecretAgent) GetName() string {
 }
 
 func main() {
-	sa := SecretAgent{Person: Person{"James", "12312321321"}, LicenseToKill: true}
+	sa := SecretAgent{
+		person: person{
+			"James",
+			"12312321321",
+		},
+		LicenseToKill: true,
+	}
 
 	fmt.Printf("%T %+v\n", sa, sa)
 	fmt.Println("secret inn", sa.GetName())
-	fmt.Println("secret inn", sa.Person.GetName())
+	fmt.Println("secret inn", sa.person.GetName())
 }

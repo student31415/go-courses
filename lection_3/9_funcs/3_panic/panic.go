@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-
+	fmt.Println("Start:")
 	// Call the testPanic function to run the test.
 	if err := testPanic(); err != nil {
 		fmt.Println("Error:", err)
@@ -42,15 +42,15 @@ func testPanic() (err error) {
 
 	//fmt.Println("Start Test")
 	//catchPanic(fmt.Errorf("At the disco"))
-	//panic(fmt.Errorf("At the disco"))
+	panic(fmt.Errorf("At the disco"))
 
 	// Mimic a traditional error from a function.
-	err = mimicError("1")
+	//err = mimicError("1")
 
 	// Trying to dereference a nil pointer will cause the
 	// runtime to panic.
-	var p *int
-	*p = 10
+	//var p *int
+	//*p = 10
 
 	fmt.Println("End Test")
 	return err

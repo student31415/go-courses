@@ -6,8 +6,12 @@ import (
 )
 
 func main() {
-	fmt.Println("counting")
+	fmt.Println("start")
 
+	//_,err:=Readfile("dfhdfnbdfn")
+	//if err!=nil{
+	//	defer fmt.Println("err:",err)
+	//}
 	for i := 0; i < 10; i++ {
 		defer fmt.Println(i)
 	}

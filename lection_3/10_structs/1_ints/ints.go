@@ -44,7 +44,7 @@ func main() {
 			Name: "MyStruct4",
 		},
 		{
-			Num:  2,
+			Num:  -1,
 			Name: "MyStruct2",
 		},
 		{
@@ -59,6 +59,13 @@ func main() {
 	fmt.Println(a)
 	sorter(a)
 	fmt.Println(a)
+	a.Swap(0, 3)
+	fmt.Println(a)
+	a.Swap(0, 3)
+	fmt.Println(a)
+	fmt.Println("1:", a.Less(1))
+	fmt.Println("0:", a.Less(0))
+	fmt.Println(a.Len())
 }
 
 func sorter(a []MyStruct) []MyStruct {

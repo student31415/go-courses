@@ -17,7 +17,7 @@ func main() {
 	println("starting level: ", world.GetStartingLevel())
 
 	// к приватной функции обратиться нельзя
-	// println("check statring level: ", world.checkStartingLevel(10))
+	println("check statring level: ", world.CheckStartingLevel(10))
 	// cannot refer to unexported name world.checkStartingLevel
 
 	// приватная область видимости распространяется на весь файл

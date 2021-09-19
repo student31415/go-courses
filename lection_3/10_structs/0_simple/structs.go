@@ -20,14 +20,16 @@ func main() {
 
 	// Declare a variable of type example and init using
 	// a struct literal.
-	e2 := example{
-		Flag:    true,
-		counter: 10,
-		pi:      3.141592,
-	}
+	//e2 := example{
+	//	Flag:    true,
+	//	counter: 10,
+	//	pi:      3.141592,
+	//}
+	//fmt.Printf("%+v\n", e2)
 
-	//e3 := example{}
-
+	e2 := example{}
+	e2.Flag = true
+	e2.pi = 3.141592
 	// Display the field values.
 	fmt.Println("Flag", e2.Flag)
 	fmt.Println("Counter", e2.counter)

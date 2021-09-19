@@ -7,7 +7,7 @@ import (
 
 func main() {
 	myTimer := getTimer()
-
+	//myTimer()
 	f := func() {
 		myTimer()
 	}
