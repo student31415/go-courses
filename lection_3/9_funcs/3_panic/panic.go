@@ -11,6 +11,7 @@ func main() {
 	if err := testPanic(); err != nil {
 		fmt.Println("Error:", err)
 	}
+	fmt.Println("End!")
 }
 
 // testPanic simulates a function that encounters a panic to
@@ -39,9 +40,9 @@ func testPanic() (err error) {
 
 	//defer stuff.GetFileDesc().Close()
 
-	fmt.Println("Start Test")
-
-	panic(fmt.Errorf("At the disco"))
+	//fmt.Println("Start Test")
+	//catchPanic(fmt.Errorf("At the disco"))
+	//panic(fmt.Errorf("At the disco"))
 
 	// Mimic a traditional error from a function.
 	err = mimicError("1")

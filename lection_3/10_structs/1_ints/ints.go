@@ -5,11 +5,6 @@ import (
 	"sort"
 )
 
-type MyStruct struct {
-	Num  int
-	Name string
-}
-
 type MyInt int
 
 func (m MyInt) showYourSelf() {
@@ -18,6 +13,11 @@ func (m MyInt) showYourSelf() {
 
 func (m *MyInt) add(i MyInt) {
 	*m = *m + MyInt(i)
+}
+
+type MyStruct struct {
+	Num  int
+	Name string
 }
 
 type mySliceStruct []MyStruct
@@ -35,9 +35,30 @@ func (m mySliceStruct) Swap(i, j int) {
 
 func main() {
 	i := MyInt(0)
-
+	i.showYourSelf()
 	i.add(3)
 	i.showYourSelf()
+	a := mySliceStruct{
+		{
+			Num:  4,
+			Name: "MyStruct4",
+		},
+		{
+			Num:  2,
+			Name: "MyStruct2",
+		},
+		{
+			Num:  1,
+			Name: "MyStruct1",
+		},
+		{
+			Num:  3,
+			Name: "MyStruct3",
+		},
+	}
+	fmt.Println(a)
+	sorter(a)
+	fmt.Println(a)
 }
 
 func sorter(a []MyStruct) []MyStruct {

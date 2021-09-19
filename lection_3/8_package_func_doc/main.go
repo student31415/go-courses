@@ -1,15 +1,17 @@
 package main
 
-import "study/go-courses/cmd/lection_2/8_package_func_doc/world"
+import "github.com/CodingSquire/go-courses/lection_3/8_package_func_doc/world"
 
 func main() {
+	//go get golang.org/x/tools/cmd/godoc
+	//godoc -http=:6060
 	world.PrintStartRoom()
 
 	// обращение к переменной или константе пакета
 	println("starting room: ", world.StartingRoom)
 
 	// приватная переменная (с маленькой буквы) доступна только внутри пакета
-	// println("starting level: ", world.startingLevel)
+	//println("starting level: ", world.startingLevel)
 	// cannot refer to unexported name world.startingLevel
 
 	println("starting level: ", world.GetStartingLevel())

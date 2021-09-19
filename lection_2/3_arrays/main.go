@@ -9,6 +9,7 @@ func main() {
 	var a1 [3]int
 	fmt.Println("массив", a1, "длина", len(a1))
 
+	return
 	// можно использовать типизированную беззнаковую константу
 	var a2 [2 * size]bool
 	fmt.Println(a2, "длина", len(a2))
