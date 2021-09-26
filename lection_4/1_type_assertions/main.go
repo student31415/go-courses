@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var i interface{} = "hello"
@@ -16,4 +18,13 @@ func main() {
 
 	f = i.(float64) // panic
 	fmt.Println(f)
+}
+
+type customInt struct {
+	value int
+}
+
+func customIntSum(a, b customInt) (result int) {
+	result = a.value + b.value
+	return
 }
