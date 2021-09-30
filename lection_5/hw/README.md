@@ -76,4 +76,4 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 #Подсказки
 
-- упрощенная задача в директории /help
+- упрощенная задача в директории [help](https://github.com/CodingSquire/go-courses/tree/main/lection_5/hw/help)
