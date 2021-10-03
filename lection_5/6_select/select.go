@@ -11,6 +11,7 @@ import (
 
 func main() {
 	// Создаем пару каналов
+	//runtime.GOMAXPROCS(runtime.NumCPU())
 	c1 := make(chan string)
 	c2 := make(chan string)
 

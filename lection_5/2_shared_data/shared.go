@@ -22,6 +22,8 @@ func (a *Account) Deposit(amount float64) {
 
 func (a *Account) Withdraw(amount float64) {
 	if amount > a.balance {
+		log.Printf("withdrawing: balance 0")
+		//go a.Withdraw(amount)
 		return
 	}
 	log.Printf("withdrawing: %f", amount)
@@ -46,6 +48,9 @@ func main() {
 			}
 		}()
 	}
+	fmt.Println("Balance:")
+	fmt.Println(acc.Balance())
+	//time.Sleep(1000*time.Microsecond)
 	fmt.Scanln()
 	// Чтоже получится в результате
 	fmt.Println(acc.Balance())
