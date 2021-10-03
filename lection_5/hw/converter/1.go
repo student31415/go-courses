@@ -20,6 +20,7 @@ func (c *converter) IntToRoman(num int) string {
 	}
 	return res
 }
+
 func NewConverter(values []int, symbols []string) Converter {
 	return &converter{
 		values:  values,

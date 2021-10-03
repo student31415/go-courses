@@ -40,6 +40,7 @@ func main() {
 			case <-time.After(time.Second):
 				fmt.Println("timeout")
 			}
+
 		}
 	}()
 

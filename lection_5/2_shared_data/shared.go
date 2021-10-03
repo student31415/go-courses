@@ -31,40 +31,53 @@ func (a *Account) Withdraw(amount float64) {
 }
 
 func main() {
-	acc := Account{}
+	//acc := Account{}
+	//fmt.Println(acc.Balance())
+	//// Стартуем 10 go рутин
+	//for i := 0; i < 10; i++ {
+	//	go func() {
+	//		// Каждая из которых, производит операции с аккаунтом
+	//		for j := 0; j < 10; j++ {
+	//			// Иногда снимает деньги
+	//			if j%2 == 1 {
+	//				acc.Withdraw(50)
+	//				continue
+	//			}
+	//			// иногда кладет
+	//			acc.Deposit(50)
+	//		}
+	//	}()
+	//}
+	////fmt.Println("Balance:")
+	//
+	////time.Sleep(500*time.Microsecond)
+	//fmt.Scanln()
+	//// Чтоже получится в результате
+	//fmt.Println(acc.Balance())
 
-	// Стартуем 10 go рутин
-	for i := 0; i < 10; i++ {
-		go func() {
-			// Каждая из которых, производит операции с аккаунтом
-			for j := 0; j < 10; j++ {
-				// Иногда снимает деньги
-				if j%2 == 1 {
-					acc.Withdraw(50)
-					continue
-				}
-				// иногда кладет
-				acc.Deposit(50)
-			}
-		}()
-	}
-	fmt.Println("Balance:")
-	fmt.Println(acc.Balance())
-	//time.Sleep(1000*time.Microsecond)
+	//var i int
+	//fmt.Println(i)
+	//
+	//for j:=0;j<10000;j++{
+	//	go func(){
+	//		i=i+1
+	//	}()
+	//}
+	//fmt.Scanln()
+	//fmt.Print("result:")
+	//fmt.Println(i)
+	closure()
 	fmt.Scanln()
-	// Чтоже получится в результате
-	fmt.Println(acc.Balance())
-
 }
 
 // //
-// func closure() {
-// 	// Функции захватывают переменные в области видимости
-// 	// Но, чтобы передавать значение, требуется явно передавать его в функцию
-// 	for i := 0; i < 10; i++ {
-// 		go func() {
-// 			fmt.Println("Got", i)
-// 		}()
-// 	}
-// 	fmt.Scanln()
-// }
+func closure() {
+	// Функции захватывают переменные в области видимости
+	// Но, чтобы передавать значение, требуется явно передавать его в функцию
+	for i := 0; i < 10; i++ {
+		go func(a int) {
+			fmt.Println("Got", a)
+		}(i)
+	}
+	fmt.Scanln()
+}
