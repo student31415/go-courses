@@ -1,7 +1,9 @@
 package person
 
 type client struct {
-	//TODO описать структуру клиента банка
+	ID        int
+	MobNumber string
+	FIO       string
 }
 
 type Client interface {
