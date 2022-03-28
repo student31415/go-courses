@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var symbol rune = 'a'
 	var autoSymbol = 'a'
-	unicodeSymbol := '⌘'
+	unicodeSymbol := '⌘' //😂😂😂😂
 	uncideSymboldByNumber := '\u2318'
 	println(symbol, autoSymbol, unicodeSymbol, uncideSymboldByNumber)
 
