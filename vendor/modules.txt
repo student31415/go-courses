@@ -1,0 +1,4 @@
+# github.com/CodingSquire/go-courses v0.0.0-20220328161314-204943e424c5
+## explicit; go 1.13
+github.com/CodingSquire/go-courses/lection_3/8_package_func_doc/world
+github.com/CodingSquire/go-courses/lection_4/calendar/cal

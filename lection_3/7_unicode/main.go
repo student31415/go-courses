@@ -11,6 +11,8 @@ func main() {
 
 	str1 := "Привет, Мир!"
 	fmt.Println("ru: ", str1, len(str1))
+	b := []rune(str1)
+	fmt.Println(b, len(b))
 	for index, runeValue := range str1 {
 		fmt.Printf("%#U at position %d\n", runeValue, index)
 	}

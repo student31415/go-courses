@@ -13,11 +13,12 @@ func main() {
 	}
 
 	f()
+	f()
 }
 
 func getTimer() func() {
 	start := time.Now()
 	return func() {
-		fmt.Printf("Time from start %v", time.Since(start))
+		fmt.Printf("Time from start %v\n", time.Since(start))
 	}
 }
