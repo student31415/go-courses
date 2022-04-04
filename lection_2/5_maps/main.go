@@ -6,7 +6,7 @@ func main() {
 	var mm map[string]string
 	fmt.Println("uninitialized map", mm)
 	// panic: assignment to entry in nil map
-	// mm["test"] = "ok"
+	//mm["test"] = "ok"
 
 	// полная инициализация
 	// var mm2 map[string]string = map[string]string{}
@@ -28,7 +28,7 @@ func main() {
 	fmt.Println("lastName", lastName, len(lastName))
 
 	// проверка на то, что значение есть
-	lastName, ok := mm3["lastName"]
+	lastName, ok := mm3["firstName"]
 	fmt.Println("lastName is", lastName, "exist:", ok)
 
 	// только получение признака существования
@@ -39,5 +39,4 @@ func main() {
 	delete(mm3, "firstName")
 	_, exist = mm3["firstName"]
 	fmt.Println("fistName exist:", exist)
-
 }

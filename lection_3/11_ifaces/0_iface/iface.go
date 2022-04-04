@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+type DB interface {
+	get(key int) int
+	set(key int, val int)
+}
+
 type Flyer interface {
 	Fly()
 }
@@ -30,10 +35,16 @@ func (m Mig45) Fly() {
 }
 
 func main() {
+	bird := Bird{"Duck plane"}
+	mig := Mig45{}
 	flSlice := []Flyer{
-		Bird{"Duck plane"},
-		Mig45{},
+		bird,
+		mig,
 	}
+	fmt.Println(bird.Name)
+	bird.Greet()
+	bird.Fly()
+
 	fmt.Println(flSlice)
 
 	for _, v := range flSlice {

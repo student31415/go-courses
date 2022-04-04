@@ -3,6 +3,7 @@ package main
 import "github.com/CodingSquire/go-courses/lection_3/8_package_func_doc/world"
 
 func main() {
+
 	//go get golang.org/x/tools/cmd/godoc
 	//godoc -http=:6060
 	world.PrintStartRoom()
@@ -22,4 +23,5 @@ func main() {
 
 	// приватная область видимости распространяется на весь файл
 	println("max level: ", maxLevel)
+
 }

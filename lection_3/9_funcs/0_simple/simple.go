@@ -5,10 +5,11 @@ import "fmt"
 func main() {
 	showMeTheMoney()
 
-	stuff := []int{10, 2, 3}
-	res := sumMore(stuff...)
+	stuff := []int{10, -2, 3}
+	res, err := sumOnlyNatural(stuff...)
 
 	fmt.Println("Res", res)
+	fmt.Println("Err", err)
 }
 
 func showMeTheMoney() {

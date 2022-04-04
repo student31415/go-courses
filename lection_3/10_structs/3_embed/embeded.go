@@ -37,4 +37,6 @@ func main() {
 	fmt.Printf("%T %+v\n", sa, sa)
 	fmt.Println("secret inn", sa.GetName())
 	fmt.Println("secret inn", sa.person.GetName())
+	fmt.Println(sa.Name)
+
 }

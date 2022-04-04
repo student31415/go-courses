@@ -9,6 +9,10 @@ type Vertex struct {
 	X, Y float64
 }
 
+func Abs(X, Y float64) float64 {
+	return math.Sqrt(X*X + Y*Y)
+}
+
 func (v Vertex) Abs() float64 {
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
@@ -18,16 +22,19 @@ func (v *Vertex) Scale(f float64) {
 	v.Y = v.Y * f
 }
 
-func (v *Vertex) noScale(f float64) {
+func (v Vertex) noScale(f float64) {
 	v.X = v.X * f
 	v.Y = v.Y * f
 }
 
 func main() {
 	v := Vertex{3, 4}
+	fmt.Println(v)
 	fmt.Println(v.Abs())
-
+	v.noScale(10)
+	fmt.Println(v)
 	v.Scale(10)
+	fmt.Println(v)
 	fmt.Println(v.Abs())
 
 	v.noScale(10)

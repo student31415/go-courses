@@ -20,7 +20,7 @@ func main() {
 
 	if firstName, ok := mm["firstName"]; !ok {
 		println("no firstName")
-	} else if firstName == "Dmitriy" {
+	} else if firstName == "Dmitriy1" {
 		println("firstName is Dmitriy")
 	} else {
 		println("firstName is not Dmitriy")
@@ -45,7 +45,7 @@ func main() {
 		idx++
 		println("while-stype loop, idx:", idx, "value:", value)
 	}
-
+	//sl := []int{3, 4, 5, 6, 7, 8}
 	for i := 0; i < len(sl); i++ {
 		println("c-style loop", i, sl[i])
 	}
@@ -78,10 +78,11 @@ func main() {
 		println("switch - name is Dmitriy")
 		// в отличии от других языков - не переходим в другой вариант по-умолчанию
 	case "Petr":
-		if mm["flag"] == "Ok" {
+		println("switch - name is Pert")
+		if mm["flag"] != "Ok" {
 			break // выходим из switch, чтобы не выполнять переход в другой вариант
 		}
-		println("switch - name is Pert")
+
 		fallthrough // переходим в следующий вариант
 	default:
 		println("switch - some other name")
@@ -95,6 +96,7 @@ func main() {
 		println("switch2 - Pashkov")
 	}
 
+	println()
 	// выход из цикла будучи внутри switch
 Loop:
 	for key, val := range mm {

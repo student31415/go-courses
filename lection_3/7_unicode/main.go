@@ -5,14 +5,17 @@ import "fmt"
 func main() {
 	var symbol rune = 'a'
 	var autoSymbol = 'a'
-	unicodeSymbol := '⌘' //😂😂😂😂
+	unicodeSymbol := '🙈' //😂
 	uncideSymboldByNumber := '\u2318'
 	println(symbol, autoSymbol, unicodeSymbol, uncideSymboldByNumber)
-
+	//println(string(symbol),string(autoSymbol),string(unicodeSymbol),string(uncideSymboldByNumber))
 	str1 := "Привет, Мир!"
+
 	fmt.Println("ru: ", str1, len(str1))
+
 	b := []rune(str1)
 	fmt.Println(b, len(b))
+
 	for index, runeValue := range str1 {
 		fmt.Printf("%#U at position %d\n", runeValue, index)
 	}
@@ -22,6 +25,7 @@ func main() {
 	for index, runeValue := range str2 {
 		fmt.Printf("%#U at position %d\n", runeValue, index)
 	}
+
 	println(str2[1])
 
 	bin := []byte(str2)
