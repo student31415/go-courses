@@ -46,7 +46,7 @@ type Converter interface {
 	IntToRoman(num int) string
 }
 
-func (c converter) IntToRoman(num int) (res string) {
+func (c *converter) IntToRoman(num int) (res string) {
 	var div int
 	res = ""
 	for i := 0; num > 0; i++ {
@@ -62,5 +62,5 @@ func (c converter) IntToRoman(num int) (res string) {
 }
 
 func NewConverter(values []int, symbols []string) Converter {
-	return converter{symbols, values}
+	return &converter{symbols, values}
 }
